@@ -5,7 +5,7 @@ var handler = require('./lib/request-handler');
 var app = express();
 
 app.configure(function() {
-  app.use(express.static(__dirname + '/public'));
+  app.use(express.static('static'));
 });
 
 module.exports = app;
