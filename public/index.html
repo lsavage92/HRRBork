@@ -6,10 +6,10 @@
   <script src="app.js"></script>
 </head>
 <body ng-app="myApp" ng-controller="MainCtrl">
-  <h1 > {{ heading }} </h1>
-  <img ng-src="{{ imgs[currentImage].src }}">
-  <p>{{ descriptions[currentDescription] }}</p>
-  <button>{{ buttonOptions[currentButton].one }}</button>
-  <button>{{ buttonOptions[currentButton].two }}</button>
+  <h1 > {{ headings[state.head] }} </h1>
+  <img ng-src="{{ imgs[state.img].src }}">
+  <p>{{ descriptions[state.desc] }}</p>
+  <button ng-click="proceed()">{{ buttonOptions[state.btn].one }}</button>
+  <button>{{ buttonOptions[state.btn].two }}</button>
 </body>
 </html>
