@@ -1,5 +1,5 @@
 // Room constructor
-var Room = function(id, img, desc, head, btn1, btn2, op1, op2, audio){
+var Room = function(id, img, desc, head, btn1, btn2, op1, op2, audio, audioSrc){
   this.id = id;
   this.img = img;
   this.desc = desc;
@@ -7,6 +7,7 @@ var Room = function(id, img, desc, head, btn1, btn2, op1, op2, audio){
   this.btns = { one: btn1, two: btn2 };
   this.options = [op1, op2]; // Room ids
   this.audio = audio || false; //defaults to false if no argument is passed
+  this.audioSrc = audioSrc;
 }
 
 //--------------------------ROOT ROOM-------------------------------------------------//
@@ -19,9 +20,17 @@ var rm1 = new Room(1, '/img/jsclearing.png', 'As you continue forth, your legs g
 
 var rm2 = new Room(2, '/img/nggyu.gif', 'DEAL WITH IT', 'DEAL WITH IT', 'Okay, fine', 'nuuuuuuuuuuuuuu', 0, 2);
 
+//--------------------------DEPTH 2--------------------------------------------------//
+var rm4 = new Room(4, '/img/gibberish.png', 'Upon receiving your first assignment, you realize you know nothing and are forced to mulligan.',
+  'I thought Javascript was a coffee brewing method...', 'Retry', 'Quit', 0, 2, true, './sound/Sad_Trombone.mp3');
+
+//var rm5 = new Room(5, );
+
 //-----------------------SUCCESS ROOMS----------------------------------------------//
 //Depth 1
-var rm3 = new Room(3, '/img/js.png', 'You easily brush off your feelings of apprehension towards the unknown and uncover your most useful tool. Vanilla JS!',
- 'A new weapon!', 'Continue', 'Eh, I\'m bored', 5, 2, true);
+var rm3 = new Room(3, '/img/js.png', 'You easily brush off your feelings of apprehension towards the unknown and uncover your most useful tool: Vanilla JS!',
+ 'A new weapon!', 'Continue', 'Eh, I\'m bored', 5, 2, true, './sound/OOT_Fanfare_Item.wav');
 
-var rooms = [rm0, rm1, rm2, rm3];
+var rooms = [rm0, rm1, rm2, rm3, rm4];
+
+//TODO: build rm4 (Should be a failing branch since without JS you can't code)
