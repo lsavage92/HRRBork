@@ -34,7 +34,7 @@ var rm5 = new Room(5, '/img/small_village.png', 'With your newfound skills ready
 
 //--------------------------DEPTH 3--------------------------------------------------//
 var rm6 = new Room(6, '/img/skeleton_sleep.png', 'Once your head hit the pillow, you felt such a calm wash over you that you slept through your alarm... And the next one... And the next one...',
-  'RIP at last', 'Retry', 'Quit', 0, 2);
+  'RIP at last', 'Retry', 'Quit', 0, 2, true, './sound/Sad_Trombone.mp3');
 
 var rm7 = new Room(7, '/img/gate.png', 'You continue on valiantly to the edge of the Village, reluctantly passing a noisy pub. Upon reaching the edge of town, you notice a gate is blocking your path. In a moment of reflection, you realize you still are quite tired.',
   'Exhausted', 'Go back for a beer', 'Brute force the gate', 8, 9);
