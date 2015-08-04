@@ -5,9 +5,28 @@ myApp.controller('MainCtrl', function($scope){
 
   $scope.currentRoom = {};
 
+  $scope.audioPlay = function() {
+    $scope.audio = document.createElement('audio');
+    $scope.audio.src = './sound/OOT_Fanfare_Item.wav';
+    $scope.audio.load();
+    $scope.audio.play();
+  };
   $scope.getCurrentRoom = function() {
     $scope.currentRoom = rooms[$scope.roomNum];
-  }
+  };
+
+  $scope.proceedLeft = function() {
+    $scope.roomNum = $scope.currentRoom.options[0];
+    $scope.getCurrentRoom();
+    if($scope.currentRoom.audio){
+      $scope.audioPlay();
+    }
+  };
+
+  $scope.proceedRight = function(){
+    $scope.roomNum = $scope.currentRoom.options[1];
+    $scope.getCurrentRoom();
+  };
 
   $scope.getCurrentRoom();
 });

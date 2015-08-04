@@ -10,7 +10,7 @@
   <h1 > {{ currentRoom.head }} </h1>
   <img ng-src="{{ currentRoom.img }}">
   <p>{{ currentRoom.desc }}</p>
-  <button ng-click="proceed()">{{ currentRoom.btns.one }}</button>
-  <button>{{ currentRoom.btns.two }}</button>
+  <button id="btn1" ng-click="proceedLeft()">{{ currentRoom.btns.one }}</button>
+  <button ng-click="proceedRight()">{{ currentRoom.btns.two }}</button>
 </body>
 </html>
