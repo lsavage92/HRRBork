@@ -20,17 +20,43 @@ var rm1 = new Room(1, '/img/jsclearing.png', 'As you continue forth, your legs g
 
 var rm2 = new Room(2, '/img/nggyu.gif', 'DEAL WITH IT', 'DEAL WITH IT', 'Okay, fine', 'nuuuuuuuuuuuuuu', 0, 2);
 
-//--------------------------DEPTH 2--------------------------------------------------//
-var rm4 = new Room(4, '/img/gibberish.png', 'Upon receiving your first assignment, you realize you know nothing and are forced to mulligan.',
-  'I thought Javascript was a coffee brewing method...', 'Retry', 'Quit', 0, 2, true, './sound/Sad_Trombone.mp3');
-
-//var rm5 = new Room(5, );
-
-//-----------------------SUCCESS ROOMS----------------------------------------------//
+//-----------------------SUCCESS ROOM----------------------------------------------//
 //Depth 1
 var rm3 = new Room(3, '/img/js.png', 'You easily brush off your feelings of apprehension towards the unknown and uncover your most useful tool: Vanilla JS!',
  'A new weapon!', 'Continue', 'Eh, I\'m bored', 5, 2, true, './sound/OOT_Fanfare_Item.wav');
 
-var rooms = [rm0, rm1, rm2, rm3, rm4];
+//--------------------------DEPTH 2--------------------------------------------------//
+var rm4 = new Room(4, '/img/gibberish.png', 'Upon receiving your first assignment, you realize you know nothing and are forced to mulligan.',
+  'I thought Javascript was a coffee brewing method...', 'Retry', 'Quit', 0, 2, true, './sound/Sad_Trombone.mp3');
 
-//TODO: build rm4 (Should be a failing branch since without JS you can't code)
+var rm5 = new Room(5, '/img/small_village.png', 'With your newfound skills ready for battle, you find a small Village for some much needed rest.',
+  'Peace at last', 'Rest', 'Continue Adventuring', 6, 7);
+
+//--------------------------DEPTH 3--------------------------------------------------//
+var rm6 = new Room(6, '/img/skeleton_sleep.png', 'Once your head hit the pillow, you felt such a calm wash over you that you slept through your alarm... And the next one... And the next one...',
+  'RIP at last', 'Retry', 'Quit', 0, 2);
+
+var rm7 = new Room(7, '/img/gate.png', 'You continue on valiantly to the edge of the Village, reluctantly passing a noisy pub. Upon reaching the edge of town, you notice a gate is blocking your path. In a moment of reflection, you realize you still are quite tired.',
+  'Exhausted', 'Go back for a beer', 'Brute force the gate', 8, 9);
+
+//--------------------------DEPTH 4--------------------------------------------------//
+var rm8 = new Room(8, '/img/pub_roboschep.png', '"Oi! Come o\'er \'ere and drink!", shouts the robotic man across the room.',
+  'A Pub?', 'Join Roboschep for a Beer', 'Exit the pub', 10, 7);
+
+var rm10 = new Room(10, '/img/pub_roboschep_zoom1.png', 'Roboschep informs you that he is shedding manly tears of despair because his beer is too large for him to lift. He says there is something beneath the pub that could help him do the heavy lifting.',
+  'Uhhhh...', 'Help Roboschep lift his beer', 'I.. Uh.. Gotta go', 11, 7);
+
+var rm9 = new Room(9, '/img/flower_field_octoadam.png', 'Steping outside the gate you are blinded by the beauty of an unknown creature in a remarkable landscape.',
+  'Wh-where am I?', 'Maybe I do want that beer', 'Befriend the creature', 8, 12);
+
+var rm12 = new Room(12, 'img/flower_field_octoadam_zoom1.png', 'Stepping closer to the shimmering creature, he begins to speak. He informs you of a man in dire need of help and he is not too far from here. The creature says he can transport you for free and with magic.',
+'I definitely should have gotten that beer', 'How could I say no to... you.', 'Sorry, I have an adventure to be on', 8, 15 )
+
+//---------------------------FAIL ROOM-----------------------------------------------//
+
+//--------------------------DEPTH 5--------------------------------------------------//
+
+var rm11 = new Room(11, '/img/dungeon1.png', 'After descending down the winding stairs you find yourself at the entrance to a dungeon.',
+  'Can robots even drink beer?', 'Roboschep needs his beer!', 'On second thought...', 13, 14);
+
+var rooms = [rm0, rm1, rm2, rm3, rm4, rm5, rm6, rm7, rm8, rm9, rm10, rm11, rm12];
