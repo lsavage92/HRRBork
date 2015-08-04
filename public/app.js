@@ -7,7 +7,7 @@ myApp.controller('MainCtrl', function($scope){
 
   $scope.audioPlay = function() {
     $scope.audio = document.createElement('audio');
-    $scope.audio.src = './sound/OOT_Fanfare_Item.wav';
+    $scope.audio.src = $scope.currentRoom.audioSrc;
     $scope.audio.load();
     $scope.audio.play();
   };
@@ -26,6 +26,9 @@ myApp.controller('MainCtrl', function($scope){
   $scope.proceedRight = function(){
     $scope.roomNum = $scope.currentRoom.options[1];
     $scope.getCurrentRoom();
+    if($scope.currentRoom.audio){
+      $scope.audioPlay();
+    }
   };
 
   $scope.getCurrentRoom();
